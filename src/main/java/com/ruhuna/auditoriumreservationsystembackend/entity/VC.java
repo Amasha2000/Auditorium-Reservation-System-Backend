@@ -1,19 +1,10 @@
-package com.ruhuna.auditoriumreservationsystembackend.entity;
+package com.ruhuna.reservationsystembackend.entity;
 
+import com.ruhuna.reservationsystembackend.enums.UserRole;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
-
-public class VC {
-}
-package com.ruhuna.reservationsystembackend.entity;
-
-        import com.ruhuna.reservationsystembackend.enums.UserRole;
-        import jakarta.persistence.*;
-        import lombok.*;
-
-        import java.util.List;
 
 @Getter
 @Setter
@@ -35,7 +26,7 @@ public class VC {
     private UserRole userRole;
 
     @OneToMany(mappedBy = "vc")
-    private List<Reservation> reservationList;
+    private List<com.ruhuna.reservationsystembackend.entity.Reservation> reservationList;
     @OneToMany(mappedBy = "vc")
     private List<Notification> notificationList;
 }
